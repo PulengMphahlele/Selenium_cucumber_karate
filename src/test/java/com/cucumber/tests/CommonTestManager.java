@@ -1,10 +1,11 @@
 package com.cucumber.tests;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.*;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
@@ -28,9 +29,18 @@ public class CommonTestManager
     {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         testRunner = new TestNGCucumberRunner(CommonTestManager.class);
 
     }
+
+
+    @AfterTest
+    public void closeBrowser() {
+
+        driver.close();
+    }
+
     @Test(description="login",dataProvider="features")
     public void login(CucumberFeatureWrapper cFeature)
     {
@@ -46,6 +56,5 @@ public class CommonTestManager
     {
         testRunner.finish();
     }
-
 
 }
