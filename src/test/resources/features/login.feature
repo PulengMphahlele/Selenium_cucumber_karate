@@ -1,4 +1,4 @@
-Feature: feature name
+Feature: Login Feature
 
   Scenario: Authentication
     Given Open Application and Enter url

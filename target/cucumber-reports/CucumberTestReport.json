@@ -4,67 +4,112 @@
     "elements": [
       {
         "line": 3,
-        "name": "Authentication",
+        "name": "",
         "description": "",
-        "id": "feature-name;authentication",
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 6785972337,
+              "duration": 2339177839,
               "status": "passed"
             },
             "line": 4,
-            "name": "Open Application and Enter url",
+            "name": "I am on home page",
             "match": {
-              "location": "LoginPage.open_Application_and_Enter_url()"
+              "location": "ShoppingCart.i_am_on_home_page()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 309030818,
+              "duration": 7783651548,
               "status": "passed"
             },
             "line": 5,
-            "name": "enter username",
+            "name": "I click home category button",
             "match": {
-              "location": "LoginPage.enter_username()"
+              "location": "ShoppingCart.i_click_home_category_button()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 4538088647,
+              "duration": 2808408851,
               "status": "passed"
             },
             "line": 6,
-            "name": "enter password",
+            "name": "I click shop now",
             "match": {
-              "location": "LoginPage.enter_password()"
+              "location": "ShoppingCart.i_click_shop_now()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 591401101,
+              "duration": 3861357710,
               "status": "passed"
             },
             "line": 7,
-            "name": "verify Message",
+            "name": "I click first item",
             "match": {
-              "location": "LoginPage.verify_Msg()"
+              "location": "ShoppingCart.i_click_first_item()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7947026527,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I click Add to cart",
+            "match": {
+              "location": "ShoppingCart.i_click_Add_to_cart()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "I should be able to remove an item",
+        "description": "",
+        "id": "shopping-cart;i-should-be-able-to-remove-an-item",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8670631379,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I remove an item",
+            "match": {
+              "location": "ShoppingCart.i_remove_an_item()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2065943304,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "item should be removed",
+            "match": {
+              "location": "ShoppingCart.item_should_be_removed()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "feature name",
+    "name": "Shopping Cart",
     "description": "",
-    "id": "feature-name",
+    "id": "shopping-cart",
     "keyword": "Feature",
-    "uri": "login.feature"
+    "uri": "src/test/resources/features/cart.feature"
   }
 ]

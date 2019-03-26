@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
         <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite" verbose="5">
-    <test name="Test">
+    <test name="Login">
         <classes>
-            <class name="com.cucumber.tests.CommonTestManager"/>
+            <class name="com.cucumber.tests.LoginRunner"/>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Cart">
+        <classes>
+            <class name="com.cucumber.tests.CartRunner"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
